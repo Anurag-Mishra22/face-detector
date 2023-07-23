@@ -15,13 +15,13 @@ for img_path in os.listdir(data_dir):
     img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
     faces = face_detactor.detectMultiScale(
-        img_gray, minNeighbors=20, minSize=(30, 30))
+        img_gray, minNeighbors=20)
 
     plt.figure()
 
     for face in faces:
         x1, y1, w, h = face
-        img = cv2.rectangle(img, (x1, y1), (x1+w, y1+h), (0, 255, 0), 10)
+        img = cv2.rectangle(img, (x1, y1), (x1+w, y1+h), (0, 255, 0), 2)
 
     img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
