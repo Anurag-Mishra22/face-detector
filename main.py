@@ -24,6 +24,7 @@ for img_path in os.listdir(data_dir):
         img = cv2.rectangle(img, (x1, y1), (x1+w, y1+h), (0, 255, 0), 10)
 
     img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+
     plt.imshow(img_rgb)
 
 plt.show()
